@@ -1,0 +1,23 @@
+{
+  "name": "robot",
+  "version": "1.0.0",
+  "description": "Create a Robot",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahlool1401/Telegram-Robot-with-JS.git"
+  },
+  "keywords": [],
+  "author": "Bahloul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bahlool1401/Telegram-Robot-with-JS/issues"
+  },
+  "homepage": "https://github.com/bahlool1401/Telegram-Robot-with-JS#readme",
+  "dependencies": {
+    "telegraf": "^4.16.3"
+  }
+}
