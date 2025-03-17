@@ -1,4 +1,5 @@
 const { Telegraf } = require("telegraf");
+const {default:axios} = require('axios');
 
 const bot = new Telegraf("7878032273:AAEogWl6kdsxkDarCfu-E81maK_jKMnx3RY");
 
@@ -45,6 +46,23 @@ bot.command('sum',(ctx)=>{
             sum = parseInt(msgArray(i))+parseInt(sum)
         }
         ctx.reply(sum.toString())
+    }    
+})
+
+botot.command('weather',(ctx)=>{
+  msg = ctx.message.text
+  msgArray = msg.split(' ')
+    if(msgArray<2){
+        ctx.reply('please enter the city')
+    }else{
+        msgArray.shift()
+        newMsg = msgArray.join('')
+        const apiKey = ''
+        const apiUrl = ''
+        axios.get(apiUrl)
+        .then((res)=>{
+          ctx.reply('')
+        })
     }    
 })
 

@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/bahlool1401/Telegram-Robot-with-JS#readme",
   "dependencies": {
+    "axios": "^1.8.3",
     "telegraf": "^4.16.3"
   }
 }
