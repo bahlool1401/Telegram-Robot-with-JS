@@ -83,8 +83,25 @@ bot.command('menu',(ctx)=>{
 bot.action('btn-1',(ctx)=>{
   ctx.reply("❤")
 })
+
 bot.action('btn-2',(ctx)=>{
   ctx.answerCbQuery("you are reading instruction😎😎😎")
+})
+
+bot.action('btn-3',(ctx)=>{
+  ctx.reply("this is the last one🤔")
+})
+
+// Chatgpt*********
+bot.command('chat',async( ctx)=>{
+  msg=ctx.message.text
+  msgArray = msg.split( )
+  if(msgArray<2){
+    ctx.reply('please enter your question')
+  }else{
+    msgArray.shift()
+    newMsg = msgArray.join(' ')
+  }
 })
 
 bot.launch();
