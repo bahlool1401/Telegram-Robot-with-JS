@@ -73,10 +73,18 @@ bot.command('menu',(ctx)=>{
     reply_narkup:{
       inline_keyboard:{
         [{text:'welcomeeeeeeeeeee',callback_data:'btn-1'},{text:'tap on it',callback_data:'btn-2'}],
-        [{text:'instruction',callback_data:'btn-3'}]
+        [{text:'instruction',callback_data:'btn-3'}],
+        [{text:'😍my university😍',url:'https://www.youtube.com'}]
       }
     }
   })
+})
+
+bot.action('btn-1',(ctx)=>{
+  ctx.reply("❤")
+})
+bot.action('btn-2',(ctx)=>{
+  ctx.answerCbQuery("you are reading instruction😎😎😎")
 })
 
 bot.launch();
