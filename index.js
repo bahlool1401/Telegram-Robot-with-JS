@@ -72,9 +72,9 @@ bot.command('menu',(ctx)=>{
   ctx.reply('hello😎😎🙌',{
     reply_narkup:{
       inline_keyboard:{
-        [{text:'welcomeeeeeeeeeee',callback_data:'btn-1'},{text:'tap on it',callback_data:'btn-2'}],
-        [{text:'instruction',callback_data:'btn-3'}],
-        [{text:'😍my university😍',url:'https://www.youtube.com'}]
+        [{text:'welcomeeeeeeeeeee',callback_data:'btn-1'},{text:'tap on it',callback_data:'btn-2'}]
+        // [{text:'instruction',callback_data:'btn-3'}]
+        // [{text:'😍my university😍',url:'https://www.youtube.com'}]
       }
     }
   })
