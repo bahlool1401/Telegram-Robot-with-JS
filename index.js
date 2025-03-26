@@ -67,6 +67,15 @@ bot.command('weather', (ctx) => {
 })
 
 // Menu ********
-
+bot.command('menu',(ctx)=>{
+    ctx.reply('hello dear. welcome here😍',{
+        reply_markup:{
+            inline_keyboard:[
+                [{text:'please tap here🙌',callback_data:'btn-1'},{text:'please tap here✌',callback_data:'btn-2'}],
+                [{text:'teaching important thing',callback_data:'btn-3'}]
+            ]
+        }
+    })
+})
 
 bot.launch()
