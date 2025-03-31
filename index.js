@@ -72,10 +72,60 @@ bot.command('menu',(ctx)=>{
         reply_markup:{
             inline_keyboard:[
                 [{text:'please tap here🙌',callback_data:'btn-1'},{text:'please tap here✌',callback_data:'btn-2'}],
-                [{text:'teaching important thing',callback_data:'btn-3'}]
+                [{text:'teaching important thing',callback_data:'btn-3'}],
+                [{text:'my chanel😃✔',url:'https://www.varzesh3.com'}]
             ]
         }
     })
+})
+// when clicked on btn-1👇
+bot.action('btn-1',(ctx)=>{
+    ctx.reply('❤')
+})
+
+// respond a popup(notif) when clicked on btn-2👇
+bot.action('btn-2',(ctx)=>{
+    ctx.answerCbQuery('this is for you🎉')
+})
+
+
+bot.action('btn-3',(ctx)=>{
+    ctx.reply('we will teach you very important thing🔄')
+})
+
+
+/// working with CHATGPT✔✔✔✔✔ 
+bot.command('chat', async(cyx)=>{
+    msg = ctx.message.text
+    msgArray = msg.split(' ')
+    if (msgArray.length < 2) {
+        ctx.reply('please enter your order to reply you🤷‍♂️')
+    } else {
+        msgArray.shift()
+        newMsg = msgArray.join(' ')
+        const apiKey = 'vjnjfdvndjfndjfneeen;rjnwaesfklwmkefmwkemwk',
+        const options = {
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json",
+                "Authorization":`Bearer ${apiKey}`
+            },
+            body:JSON.stringify({
+                "model":"gpt-3.5-turbo",
+                "messages":[{
+                    "role":"system",
+                    "content": newMsg
+                }]
+            })
+        }
+        try {
+            const response =await fetch("https://api.openai.com/v1/chat/completions", option)
+            const data = response.json()
+            console.log(data);
+        } catch (error) {
+            console.log(error);
+        }
+    }
 })
 
 bot.launch()
